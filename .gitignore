@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/MimDms
+/Mim.V4200/bin/Debug
+/Mim.V4200/obj
+/Mim.V4200/.vs/Mim.V6301
+/Mim.V6301/.vs/Mim.V6301
+/Mim.V6301/bin/Debug
+/Mim.V6301/obj
