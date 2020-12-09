@@ -3,9 +3,8 @@
 ################################################################################
 
 /.vs/MimDms
-/Mim.V4200/bin/Debug
-/Mim.V4200/obj
+bin/
+obj/
+/packages
 /Mim.V4200/.vs/Mim.V6301
-/Mim.V6301/.vs/Mim.V6301
-/Mim.V6301/bin/Debug
-/Mim.V6301/obj
+/Mim.V3109/.vs/Mim.V6301
