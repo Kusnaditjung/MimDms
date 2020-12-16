@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <Authors>kusnaditjung@yahoo.com</Authors>
     <Company>FreeCode</Company>
     <Product>Mim.V3109</Product>
