@@ -3,9 +3,9 @@ using System.IO;
 using System.Reflection;
 using System.Xml;
 using System.Xml.Schema;
-using Mim.Resolvers;
+using Messaging.Resolvers;
 
-namespace Mim.Core.Validators
+namespace Messaging.Validators
 {
 	public sealed class SchemaValidator
 	{

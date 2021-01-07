@@ -1,8 +1,8 @@
-﻿using Mim.Core.Validators;
-using Mim.Resolvers;
+﻿using Messaging.Validators;
+using Messaging.Resolvers;
 using Xunit;
 
-namespace Mim.Core.Tests.Validators
+namespace Messaging.Validators.Tests
 {
 	public class CdaValidatorTests
 	{

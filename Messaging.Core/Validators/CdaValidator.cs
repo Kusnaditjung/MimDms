@@ -2,10 +2,10 @@
 using System.IO;
 using System.Reflection;
 using System.Xml;
-using Mim.Resolvers;
-using Mim.Validators;
+using Messaging.Resolvers;
+using Messaging.Transformers;
 
-namespace Mim.Core.Validators
+namespace Messaging.Validators
 {
 	public sealed class CdaValidator
 	{

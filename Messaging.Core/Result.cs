@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Mim
+namespace Messaging
 {
 	public sealed class Result
 	{

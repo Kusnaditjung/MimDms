@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Mim.Resolvers
+namespace Messaging.Resolvers
 {
 	public sealed class DirectoryResourceResolver : ResourceResolver
 	{

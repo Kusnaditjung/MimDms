@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace Mim.Resolvers
+namespace Messaging.Resolvers
 {
 	public interface IResourceResolver
 	{

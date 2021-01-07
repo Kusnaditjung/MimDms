@@ -3,10 +3,10 @@ using System.IO;
 using System.Text;
 using System.Xml;
 using System.Xml.Xsl;
-using Mim.Resolvers;
-using static Mim.Core.Extensions;
+using Messaging.Resolvers;
+using static Messaging.Extensions;
 
-namespace Mim
+namespace Messaging.Transformers
 {
 	public sealed class StylesheetTransformer
 	{

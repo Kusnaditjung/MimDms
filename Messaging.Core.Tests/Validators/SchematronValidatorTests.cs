@@ -1,9 +1,9 @@
 ﻿using System;
-using Mim.Resolvers;
-using Mim.Validators;
+using Messaging.Resolvers;
+using Messaging.Validators;
 using Xunit;
 
-namespace Mim.Core.Validators
+namespace Messaging.Validators.Tests
 {
 	public class SchematronValidatorTests
 	{

@@ -2,7 +2,7 @@
 using System.IO;
 using System.Reflection;
 
-namespace Mim.Resolvers
+namespace Messaging.Resolvers
 {
 	/// <summary>This class resolves resource by matching filename and extension of the embedded resources in an assembly
 	/// </summary>

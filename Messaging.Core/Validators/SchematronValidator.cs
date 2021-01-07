@@ -1,9 +1,10 @@
 ﻿using System;
 using System.IO;
-using Mim.Core;
-using Mim.Resolvers;
+using Messaging;
+using Messaging.Resolvers;
+using Messaging.Transformers;
 
-namespace Mim.Validators
+namespace Messaging.Validators
 {
 	public sealed class SchematronValidator
 	{
@@ -81,7 +82,6 @@ namespace Mim.Validators
 			{
 				SchematronDocument.GenericCda => new SchematronValidator("Generic_CDA_Document_Schematron.xml".GetStreamFromAssembly()),
 				SchematronDocument.TemplatedCda => new SchematronValidator("Templated_CDA_Document_Schematron.xml".GetStreamFromAssembly()),
-				//SchematronDocument.TemplatedCda => new SchematronValidator("CfH_CDA_Document_Schematron.xml".GetStreamFromAssembly()), 
 				SchematronDocument.PsisQuery => new SchematronValidator("PSIS_Query_Schematron.xml".GetStreamFromAssembly()),
 				SchematronDocument.GenericCdaInteraction => new SchematronValidator("Generic_CDA_Interaction_Schematron.xml".GetStreamFromAssembly()),
 				_ => throw new ArgumentOutOfRangeException($"{schematronDocument} has no translation")

@@ -8,9 +8,14 @@
 
   <ItemGroup>
     <Content Remove="C:\Users\kusna\.nuget\packages\microsoft.testplatform.testhost\16.8.3\build\netcoreapp2.1\x64\Microsoft.TestPlatform.PlatformAbstractions.dll" />
+    <Content Remove="C:\Users\kusna\.nuget\packages\microsoft.testplatform.testhost\16.8.3\build\netcoreapp2.1\x64\testhost.dll" />
+    <Content Remove="C:\Users\kusna\.nuget\packages\microsoft.testplatform.testhost\16.8.3\build\netcoreapp2.1\x64\testhost.exe" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="C:\Users\kusna\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll" />
+    <None Remove="C:\Users\kusna\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll" />
+    <None Remove="C:\Users\kusna\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll" />
     <None Remove="Resources\CDALikeToTrueCDA.xsl" />
     <None Remove="Resources\Generic_CDA_Document_OldSchematron.xml" />
     <None Remove="Resources\POCD_EX150001UK06_05.xml" />
@@ -34,7 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mim.Core\Mim.Core.csproj" />
+    <ProjectReference Include="..\Mim.Core\Messaging.Core.csproj" />
     <ProjectReference Include="..\Mim.V6301\Mim.V6301.csproj" />
   </ItemGroup>
 

@@ -6,10 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
-using Mim.Core.Validators;
-using Mim.Resolvers;
+using Messaging.Validators;
+using Messaging.Resolvers;
 
-namespace Mim.Core
+namespace Messaging
 {
 	public static class Extensions
 	{

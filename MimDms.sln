@@ -6,9 +6,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mim.V6301", "Mim.V6301\Mim.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mim.V4200", "Mim.V4200\Mim.V4200.csproj", "{A0F4F521-879D-4E82-B810-AF761B6256C6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mim.Core", "Mim.Core\Mim.Core.csproj", "{A12FD598-B5FF-436E-B57A-485CFBF189D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messaging.Core", "Messaging.Core\Messaging.Core.csproj", "{A12FD598-B5FF-436E-B57A-485CFBF189D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mim.Core.Tests", "Mim.Core.Tests\Mim.Core.Tests.csproj", "{8AF9C232-CEFA-4D36-AF67-C31FC1B81E30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messaging.Core.Tests", "Messaging.Core.Tests\Messaging.Core.Tests.csproj", "{8AF9C232-CEFA-4D36-AF67-C31FC1B81E30}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mim.V3109", "Mim.V3109\Mim.V3109.csproj", "{D7F5A382-EB4C-4443-A97B-E475E37EA5B5}"
 EndProject

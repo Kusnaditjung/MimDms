@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Mim.Resolvers;
+using Messaging.Resolvers;
 using Xunit;
 
-namespace Mim.Core.Tests.Transformers
+namespace Messaging.Transformers.Tests
 {
 	public class StylesheetTransformerTests
 	{
