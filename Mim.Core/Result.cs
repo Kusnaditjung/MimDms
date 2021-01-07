@@ -2,7 +2,7 @@
 
 namespace Mim
 {
-	public class Result
+	public sealed class Result
 	{
 		public readonly bool Status;
 		public readonly string Description;

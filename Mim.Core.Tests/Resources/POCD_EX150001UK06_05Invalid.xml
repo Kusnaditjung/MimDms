@@ -21,9 +21,9 @@
 		<functionCode code="OA" displayName="Originating Author" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.178" />
 		<time value="200609281030" />
 		<assignedAuthor classCode="ASSIGNED">
-			<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145001UK03#AssignedAuthorSDS" />
-      <id root="1.2.826.0.1285.0.2.0.65" extension="200009876204" />
-      <id root="1.2.826.0.1285.0.2.0.67" extension="100077650987" />
+			<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145001UK03#AssignedAuthor" />
+			<id root="1.2.826.0.1285.0.2.0.67" extension="100077650987" />
+			<id root="1.2.826.0.1285.0.2.0.65" extension="200009876204" />
 			<code code="R0680" displayName="Midwife" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.196" />
 			<assignedPerson classCode="PSN" determinerCode="INSTANCE">
 				<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145001UK03#assignedPerson" />
@@ -66,15 +66,10 @@
 		<intendedRecipient classCode="ASSIGNED">
 			<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145021UK02#AssignedEntitySDS" />
 			<npfitlc:recipientRoleCode code="GP" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.196" displayName="General Practitioner" />
-      <id root="1.2.826.0.1285.0.2.0.65" extension="100033265214" />
-      <id root="1.2.826.0.1285.0.2.0.67" extension="20006548306" />
-
+			<id root="1.2.826.0.1285.0.2.0.67" extension="20006548306" />
+			<id root="1.2.826.0.1285.0.2.0.65" extension="100033265214" />
 			<informationRecipient classCode="PSN" determinerCode="INSTANCE">
 				<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145021UK02#assignedPerson" />
-				<name>
-					<given>Keith</given>
-					<family>Yale</family>
-				</name>
 			</informationRecipient>
 		</intendedRecipient>
 	</informationRecipient>
@@ -83,9 +78,8 @@
 		<intendedRecipient classCode="ASSIGNED">
 			<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145021UK02#AssignedEntitySDS" />
 			<npfitlc:recipientRoleCode code="HV" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.196" displayName="Health Visitor" />
-      <id root="1.2.826.0.1285.0.2.0.65" extension="1000063985472" />
-      <id root="1.2.826.0.1285.0.2.0.67" extension="200033698512" />
-
+			<id root="1.2.826.0.1285.0.2.0.67" extension="200033698512" />
+			<id root="1.2.826.0.1285.0.2.0.65" extension="1000063985472" />
 			<informationRecipient classCode="PSN" determinerCode="INSTANCE">
 				<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145021UK02#assignedPerson" />
 				<name>
@@ -100,9 +94,8 @@
 		<intendedRecipient classCode="ASSIGNED">
 			<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145021UK02#AssignedEntitySDS" />
 			<npfitlc:recipientRoleCode code="PN" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.196" displayName="Practice Nurse" />
-      <id root="1.2.826.0.1285.0.2.0.65" extension="100035214897" />
-      <id root="1.2.826.0.1285.0.2.0.67" extension="200033245589" />
-
+			<id root="1.2.826.0.1285.0.2.0.67" extension="200033245589" />
+			<id root="1.2.826.0.1285.0.2.0.65" extension="100035214897" />
 			<informationRecipient classCode="PSN" determinerCode="INSTANCE">
 				<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145021UK02#assignedPerson" />
 				<name>
@@ -128,9 +121,8 @@
 				<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145022UK01#AssignedEntitySDS" />
 				<assignedEntity classCode="ASSIGNED">
 					<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145022UK01#AssignedEntitySDS" />
-          <id root="1.2.826.0.1285.0.2.0.65" extension="200009876204" />
-          <id root="1.2.826.0.1285.0.2.0.67" extension="100077650987" />
-
+					<id root="1.2.826.0.1285.0.2.0.67" extension="100077650987" />
+					<id root="1.2.826.0.1285.0.2.0.65" extension="200009876204" />
 					<code nullFlavor="UNK" />
 					<assignedPerson determinerCode="INSTANCE" classCode="PSN">
 						<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145022UK01#assignedPerson" />
@@ -269,8 +261,8 @@
 								<time value="200601280915" />
 								<assignedEntity classCode="ASSIGNED">
 									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145022UK01#AssignedEntitySDS" />
+									<id root="1.2.826.0.1285.0.2.0.67" extension="100096655241" />
 									<id root="1.2.826.0.1285.0.2.0.65" extension="200044213298" />
-                  <id root="1.2.826.0.1285.0.2.0.67" extension="100096655241" />
 									<code code="R1290" displayName="Pharmacist" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.196" />
 									<assignedPerson classCode="PSN" determinerCode="INSTANCE">
 										<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145022UK01#assignedPerson" />
@@ -303,7 +295,7 @@
 						<section classCode="DOCSECT" moodCode="EVN">
 							<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146061UK01#Section1" />
 							<id root="97FDC068-A7BB-4A8F-9E6B-50BF00CAAC66" />
-              <title> test </title>
+							<title />
 							<text>
 								<table>
 									<tbody>

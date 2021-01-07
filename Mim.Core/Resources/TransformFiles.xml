@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<TransformXmlConfig>
+  <Files Category="OntheWireToTemplate">
+    <Filename resourceName ="Emis.Common.CDA.TransformXsl.TrueCDAToCDALike_v2.xsl">TrueCDAToCDALike_v2.xsl</Filename>
+    <Filename resourceName ="Emis.Common.CDA.TransformXsl.postTxReorder_v2.xslt">postTxReorder_v2.xslt</Filename>
+    <Filename resourceName ="Emis.Common.CDA.TransformXsl.SerialisedCDAModel.xml">SerialisedCDAModel.xml</Filename>
+    <Filename resourceName ="Emis.Common.CDA.TransformXsl.sortedMifClassAtts.xml">sortedMifClassAtts.xml</Filename>
+    <Filename resourceName ="Emis.Common.CDA.TransformXsl.TemplateLookup.xml">TemplateLookup.xml</Filename>
+  </Files>
+  <Files Category="TemplateToOntheWire">
+    <Filename resourceName ="Emis.Common.CDA.TransformXsl.CDALikeToTrueCDA_v2.xsl">CDALikeToTrueCDA_v2.xsl</Filename>
+    <Filename resourceName ="Emis.Common.CDA.TransformXsl.postTxReorder_v2.xslt">postTxReorder_v2.xslt</Filename>
+    <Filename resourceName ="Emis.Common.CDA.TransformXsl.SerialisedCDAModel.xml">SerialisedCDAModel.xml</Filename>
+    <Filename resourceName ="Emis.Common.CDA.TransformXsl.sortedMifClassAtts.xml">sortedMifClassAtts.xml</Filename>
+    <Filename resourceName ="Emis.Common.CDA.TransformXsl.TemplateLookup.xml">TemplateLookup.xml</Filename>
+  </Files>
+</TransformXmlConfig>
