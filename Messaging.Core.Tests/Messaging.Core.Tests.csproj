@@ -39,7 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mim.Core\Messaging.Core.csproj" />
+    <ProjectReference Include="..\Messaging.Core\Messaging.Core.csproj" />
     <ProjectReference Include="..\Mim.V6301\Mim.V6301.csproj" />
   </ItemGroup>
 

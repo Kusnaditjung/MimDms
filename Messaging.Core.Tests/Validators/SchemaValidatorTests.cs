@@ -24,6 +24,14 @@ namespace Messaging.Validators.Tests
 			Assert.True(result.Status);
 		}
 
+		[Fact]
+		public void Validate_SpecifyingUsingSchemaNames_NormalCall()
+		{
+			var schemaValidator = new SchemaValidator(new EmbeddedResourceResolver(typeof(Mim.V6301.POCD_IN150001UK06).Assembly));
+			var result = schemaValidator.Validate(Mim.V6301.SchemaNames.POCD_MT000001UK04.ToString(), _localResolver.GetResourceStream("POCD_EX150001UK06_05.xml").GetText());
+
+			Assert.True(result.Status);
+		}
 
 		[Fact]
 		public void Validate_Failed()
