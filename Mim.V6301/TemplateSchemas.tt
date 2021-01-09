@@ -12,11 +12,11 @@
 	WriteLine($"namespace {project.Name}");
 #>
 {
-	public enum SchemaNames
+	public enum TemplateSchemaNames
 	{
 		<#
 		var root = Host.ResolvePath("");
-		var fileNames = Directory.EnumerateFiles(root + "/Schema/Schemas", "*.xsd", SearchOption.AllDirectories)
+		var fileNames = Directory.EnumerateFiles(root + "/Schema/TemplateSchemas", "*.xsd", SearchOption.AllDirectories)
 			.Select(f => Path.GetFileNameWithoutExtension(f).Replace("-", "_"))
 			.Where(f => !f.Contains("BatchCommon") && !f.Contains("BatchMapping"))
 			.OrderBy(f => f)

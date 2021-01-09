@@ -1206,6 +1206,10 @@
       <LastGenOutput>SchemaNames.cs</LastGenOutput>
       <Generator>TextTemplatingFileGenerator</Generator>
     </None>
+    <None Update="TemplateSchemas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateSchemas.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -1217,6 +1221,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>SchemaNames.tt</DependentUpon>
+    </Compile>
+    <Compile Update="TemplateSchemas.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TemplateSchemas.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

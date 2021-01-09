@@ -4,8 +4,6 @@ namespace Mim.V6301
 {
 	public enum SchemaNames
 	{
-		BatchCommon,
-		BatchMapping,
 		COCD_TP145001UK03,
 		COCD_TP145002UK03,
 		COCD_TP145003UK03,

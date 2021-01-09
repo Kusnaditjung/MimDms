@@ -17,7 +17,7 @@
 		<#
 		var root = Host.ResolvePath("");
 		var fileNames = Directory.EnumerateFiles(root + "/Schema/Schemas", "*.xsd", SearchOption.AllDirectories)
-			.Select(f => Path.GetFileNameWithoutExtension(f))
+			.Select(f => Path.GetFileNameWithoutExtension(f).Replace("-", "_"))
 			.OrderBy(f => f)
 			.ToList();
 		WriteLine(string.Join(",\n\t\t", fileNames));
