@@ -1,4 +1,6 @@
-﻿namespace Mim.V4200
+﻿
+
+namespace Mim.V4200
 {
 	public enum SchemaNames
 	{
