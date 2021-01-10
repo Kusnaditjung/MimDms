@@ -1,0 +1,686 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>kusnaditjung@yahoo.com</Authors>
+    <Company>FreeCode</Company>
+    <Product>Dms.Ambulance.V2100</Product>
+    <Description>The package contains c# generated classes for DMS Ambulance or NHS 111 version 2.1.00, and also its associated schemas that can be used for schema validation.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/Kusnaditjung/MimDms</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Kusnaditjung/MimDms</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+    <PackageReleaseNotes>This is first release of DMS Ambulance or NHS111 2.1.00</PackageReleaseNotes>
+    <PackageId>Dms.Ambulance.V2100</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Schema\dt\commonInclude.xsd" />
+    <None Remove="Schema\dt\datatypeflavours.xsd" />
+    <None Remove="Schema\dt\datatypes-2005.xsd" />
+    <None Remove="Schema\dt\datatypes.xsd" />
+    <None Remove="Schema\dt\infrastructureRoot.xsd" />
+    <None Remove="Schema\dt\NarrativeBlock.xsd" />
+    <None Remove="Schema\dt\NHSLocalisation.xsd" />
+    <None Remove="Schema\dt\NHSVocab.xsd" />
+    <None Remove="Schema\dt\TemplateConfig.xsd" />
+    <None Remove="Schema\dt\xhtmlNPfIT.xsd" />
+    <None Remove="Schema\dt\xhtmlNPfITPresentationText.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145001UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145002UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145003UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145004UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145005UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145006UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145007UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145007UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145008UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145012UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145013UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145014UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145017UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145018UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145020UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145021UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145021UK05.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145022UK02.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145024UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145025UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145200GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145201GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145202GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145202GB02.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145203GB02.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145203GB03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145205GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145207GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145208GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145210GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145211GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145212GB02.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145213GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP145220GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146001UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146002UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146003UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146004UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146005UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146005UK05.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146006UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146007UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146008UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146009UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146010UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146011UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146012UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146013UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146014UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146015UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146016UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146017UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146018UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146019UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146020UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146021UK05.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146021UK06.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146022UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146023UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146024UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146025UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146026UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146027UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146029UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146030UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146031UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146032UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146033UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146033UK05.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146034UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146036UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146037UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146060UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146061UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146061UK02.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146062UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146224GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146224GB02.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146301GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146302GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146303GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146304GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146305GB02.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146306GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146307GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146308GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146309GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146310GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146311GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146312GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146313GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146314GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146315GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146316GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146317GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146318GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146319GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146320GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146321GB02.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146322GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146323GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146324GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146325GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146326GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146327GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146329GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146330GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146331GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146332GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146333GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146334GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146336GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146337GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146360GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP146360GB02.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147001UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147002UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147003UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147004UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147005UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147006UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147010UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147011UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147012UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147013UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147014UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147015UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147016UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147017UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147018UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147019UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147020UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147021UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147022UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147023UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147024UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147025UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147026UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147027UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147029UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147030UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147031UK04.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147032UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147033UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147034UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147037UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147038UK03.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147065UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147066UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147067UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147068UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147069UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147070UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147071UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147072UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147073UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147074UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147075UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147100UK01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147301GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147302GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147303GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147304GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147305GB02.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147306GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147310GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147311GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147312GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147313GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147314GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147315GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147316GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147317GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147318GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147319GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147320GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147321GB02.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147322GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147323GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147324GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147325GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147326GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147327GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147329GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147330GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147331GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147332GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147333GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147334GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147337GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147338GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147365GB02.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147366GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147367GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147368GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147369GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147370GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147371GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147372GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147373GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147374GB01.xsd" />
+    <None Remove="Schema\Schemas\COCD_TP147375GB02.xsd" />
+    <None Remove="Schema\Schemas\distributionEnvelope-v2-0.xsd" />
+    <None Remove="Schema\Schemas\ITKDatatypes-2010-05.xsd" />
+    <None Remove="Schema\Schemas\ITKMessageTypes-2010-05.xsd" />
+    <None Remove="Schema\Schemas\MCAI_MT040101UK03.xsd" />
+    <None Remove="Schema\Schemas\MCCI_IN010000UK13.xsd" />
+    <None Remove="Schema\Schemas\MCCI_MT010101UK12.xsd" />
+    <None Remove="Schema\Schemas\MCCI_MT020101UK12.xsd" />
+    <None Remove="Schema\Schemas\POCD_IN030001UK01.xsd" />
+    <None Remove="Schema\Schemas\POCD_IN030002UK01.xsd" />
+    <None Remove="Schema\Schemas\POCD_IN030003UK01.xsd" />
+    <None Remove="Schema\Schemas\POCD_IN030004UK01.xsd" />
+    <None Remove="Schema\Schemas\POCD_MT000001UK04.xsd" />
+    <None Remove="Schema\Schemas\POCD_MT000002UK01.xsd" />
+    <None Remove="Schema\Schemas\POCD_MT030001UK01.xsd" />
+    <None Remove="Schema\Schemas\UKCT_MT120301UK02.xsd" />
+    <None Remove="Schema\Schemas\UKCT_MT120501UK02.xsd" />
+    <None Remove="Schema\Schemas\UKCT_MT120501UK03.xsd" />
+    <None Remove="Schema\Schemas\UKCT_MT120901UK01.xsd" />
+    <None Remove="Schema\Schemas\UKCT_MT121001UK01.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000001_Act.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000001_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000001_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000001_Section.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000002_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000002_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000003_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000003_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000004_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000004_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000005_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000005_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000006_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000006_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000007_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000007_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000008_Act.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000008_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000009_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000010_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000011_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000013_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000014_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000014_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000015_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000016_Act.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000016_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000017_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000018_Act.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000018_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000019_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000020_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000021_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000022_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000024_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000025_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000026_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000027_Act.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000027_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000027_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000028_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000032_Section.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000041_Section.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000044_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000070_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000081_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000085_Role.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000301_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000302_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000303_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000304_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000305_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000306_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000307_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000308_Act.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000309_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000310_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000311_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000313_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000314_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000315_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000316_Act.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000317_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000318_Act.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000318_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000320_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000327_Act.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000327_ActRef.xsd" />
+    <None Remove="Schema\TemplateSchemas\NPFIT-000406_Role.xsd" />
+    <None Remove="Schema\VocabularySchemas\CDAVocab.xsd" />
+    <None Remove="Schema\VocabularySchemas\InfVocab.xsd" />
+    <None Remove="Schema\voc\voc.xsd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Schema\dt\commonInclude.xsd" />
+    <EmbeddedResource Include="Schema\dt\datatypeflavours.xsd" />
+    <EmbeddedResource Include="Schema\dt\datatypes-2005.xsd" />
+    <EmbeddedResource Include="Schema\dt\datatypes.xsd" />
+    <EmbeddedResource Include="Schema\dt\infrastructureRoot.xsd" />
+    <EmbeddedResource Include="Schema\dt\NarrativeBlock.xsd" />
+    <EmbeddedResource Include="Schema\dt\NHSLocalisation.xsd" />
+    <EmbeddedResource Include="Schema\dt\NHSVocab.xsd" />
+    <EmbeddedResource Include="Schema\dt\TemplateConfig.xsd" />
+    <EmbeddedResource Include="Schema\dt\xhtmlNPfIT.xsd" />
+    <EmbeddedResource Include="Schema\dt\xhtmlNPfITPresentationText.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145001UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145002UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145003UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145004UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145005UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145006UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145007UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145007UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145008UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145012UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145013UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145014UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145017UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145018UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145020UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145021UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145021UK05.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145022UK02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145024UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145025UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145200GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145201GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145202GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145202GB02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145203GB02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145203GB03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145205GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145207GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145208GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145210GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145211GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145212GB02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145213GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP145220GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146001UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146002UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146003UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146004UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146005UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146005UK05.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146006UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146007UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146008UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146009UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146010UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146011UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146012UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146013UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146014UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146015UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146016UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146017UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146018UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146019UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146020UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146021UK05.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146021UK06.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146022UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146023UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146024UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146025UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146026UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146027UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146029UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146030UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146031UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146032UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146033UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146033UK05.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146034UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146036UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146037UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146060UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146061UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146061UK02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146062UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146224GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146224GB02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146301GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146302GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146303GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146304GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146305GB02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146306GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146307GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146308GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146309GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146310GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146311GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146312GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146313GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146314GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146315GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146316GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146317GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146318GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146319GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146320GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146321GB02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146322GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146323GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146324GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146325GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146326GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146327GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146329GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146330GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146331GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146332GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146333GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146334GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146336GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146337GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146360GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP146360GB02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147001UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147002UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147003UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147004UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147005UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147006UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147010UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147011UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147012UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147013UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147014UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147015UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147016UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147017UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147018UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147019UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147020UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147021UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147022UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147023UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147024UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147025UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147026UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147027UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147029UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147030UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147031UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147032UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147033UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147034UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147037UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147038UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147065UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147066UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147067UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147068UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147069UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147070UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147071UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147072UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147073UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147074UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147075UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147100UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147301GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147302GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147303GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147304GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147305GB02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147306GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147310GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147311GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147312GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147313GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147314GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147315GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147316GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147317GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147318GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147319GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147320GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147321GB02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147322GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147323GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147324GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147325GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147326GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147327GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147329GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147330GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147331GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147332GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147333GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147334GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147337GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147338GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147365GB02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147366GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147367GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147368GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147369GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147370GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147371GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147372GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147373GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147374GB01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\COCD_TP147375GB02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\distributionEnvelope-v2-0.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\ITKDatatypes-2010-05.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\ITKMessageTypes-2010-05.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\MCAI_MT040101UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\MCCI_IN010000UK13.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\MCCI_MT010101UK12.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\MCCI_MT020101UK12.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\POCD_IN030001UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\POCD_IN030002UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\POCD_IN030003UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\POCD_IN030004UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\POCD_MT000001UK04.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\POCD_MT000002UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\POCD_MT030001UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\UKCT_MT120301UK02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\UKCT_MT120501UK02.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\UKCT_MT120501UK03.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\UKCT_MT120901UK01.xsd" />
+    <EmbeddedResource Include="Schema\Schemas\UKCT_MT121001UK01.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000001_Act.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000001_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000001_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000001_Section.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000002_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000002_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000003_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000003_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000004_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000004_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000005_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000005_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000006_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000006_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000007_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000007_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000008_Act.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000008_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000009_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000010_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000011_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000013_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000014_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000014_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000015_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000016_Act.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000016_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000017_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000018_Act.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000018_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000019_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000020_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000021_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000022_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000024_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000025_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000026_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000027_Act.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000027_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000027_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000028_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000032_Section.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000041_Section.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000044_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000070_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000081_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000085_Role.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000301_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000302_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000303_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000304_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000305_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000306_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000307_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000308_Act.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000309_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000310_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000311_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000313_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000314_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000315_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000316_Act.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000317_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000318_Act.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000318_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000320_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000327_Act.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000327_ActRef.xsd" />
+    <EmbeddedResource Include="Schema\TemplateSchemas\NPFIT-000406_Role.xsd" />
+    <EmbeddedResource Include="Schema\VocabularySchemas\CDAVocab.xsd" />
+    <EmbeddedResource Include="Schema\VocabularySchemas\InfVocab.xsd" />
+    <EmbeddedResource Include="Schema\voc\voc.xsd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Generated\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="SchemaNames.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SchemaNames.tt</DependentUpon>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SchemaNames.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SchemaNames.cs</LastGenOutput>
+    </None>
+    <None Update="TemplateSchemas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateSchemas.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="SchemaNames.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SchemaNames.tt</DependentUpon>
+    </Compile>
+    <Compile Update="TemplateSchemas.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TemplateSchemas.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
