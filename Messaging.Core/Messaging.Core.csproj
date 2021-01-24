@@ -1,10 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+
     <TargetFramework>net5.0</TargetFramework>
     <Authors>kusnaditjung@yahoo.com</Authors>
     <Company>FreeCode</Company>
+
     <LangVersion>8</LangVersion>
+
+    <Product>Messaging.Core</Product>
+    <Description>The package contains schema and schematron validation, transformers and to be used in conjunction with the MIM and DMS packages.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/Kusnaditjung/MimDms</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Kusnaditjung/MimDms</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+    <PackageReleaseNotes>This is first release of Messaging.Core</PackageReleaseNotes>
+    <PackageId>Messaging.Core</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
@@ -44,6 +58,13 @@
     <EmbeddedResource Include="Resources\Schematrons\PSIS_Query_Schematron.xml" />
     <EmbeddedResource Include="Resources\Transformers\CDA_NPfIT_Document_Renderer.xsl" />
     <EmbeddedResource Include="Resources\Transformers\IntegratedUrgentCare_CDA_Renderer_PrimaryRecipients.xslt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE" Link="LICENSE">
+      <PackagePath></PackagePath>
+      <Pack>True</Pack>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
