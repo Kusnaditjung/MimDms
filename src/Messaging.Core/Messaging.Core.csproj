@@ -1,0 +1,94 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>kusnaditjung@yahoo.com</Authors>
+    <Company>FreeCode</Company>
+
+    <LangVersion>8</LangVersion>
+
+    <Product>Messaging.Core</Product>
+    <Description>The package contains schema and schematron validation, transformers and to be used in conjunction with the MIM and DMS packages.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/Kusnaditjung/MimDms</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Kusnaditjung/MimDms</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+    <PackageReleaseNotes>Messaging.Core</PackageReleaseNotes>
+    <PackageId>Messaging.Core</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Version>1.2.0</Version>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>..\..\documentation\$(AssemblyName).xml </DocumentationFile>
+    <PackageOutputPath>../../dist/ </PackageOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\postTxReorder.xslt" />
+    <None Remove="Resources\postTxReorder_v2.xslt" />
+    <None Remove="Resources\Schematrons\Generic_CDA_Document_Schematron.xml" />
+    <None Remove="Resources\Schematrons\Generic_CDA_Interaction_Schematron.xml" />
+    <None Remove="Resources\Templated_CDA_Document_Schematron.xml" />
+    <None Remove="Resources\Transformers\CDALikeToTrueCDA.xsl" />
+    <None Remove="Resources\Transformers\postTxReorder.xslt" />
+    <None Remove="Resources\Transformers\TrueCDAToCDALike.xsl" />
+    <None Remove="Resources\TransformFiles.xml" />
+    <None Remove="Resources\Schematrons\Iso\iso_abstract_expand.xsl" />
+    <None Remove="Resources\Schematrons\Iso\iso_dsdl_include.xsl" />
+    <None Remove="Resources\Schematrons\Iso\iso_schematron_skeleton_for_xslt1.xsl" />
+    <None Remove="Resources\Schematrons\Iso\iso_schematron_text.xsl" />
+    <None Remove="Resources\Schematrons\Iso\iso_svrl_for_xslt1.xsl" />
+    <None Remove="Resources\Schematrons\PSIS_Query_Schematron.xml" />
+    <None Remove="Resources\Transformers\CDA_NPfIT_Document_Renderer.xsl" />
+    <None Remove="Resources\Transformers\IntegratedUrgentCare_CDA_Renderer_PrimaryRecipients.xslt" />
+    <None Remove="Resources\TrueCDAToCDALike_v2.xsl" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Transformers\CDALikeToTrueCDA.xsl" />
+    <EmbeddedResource Include="Resources\Schematrons\Generic_CDA_Document_Schematron.xml" />
+    <EmbeddedResource Include="Resources\Schematrons\Generic_CDA_Interaction_Schematron.xml" />
+    <EmbeddedResource Include="Resources\Schematrons\Templated_CDA_Document_Schematron.xml" />
+    <EmbeddedResource Include="Resources\Transformers\postTxReorder.xslt" />
+    <EmbeddedResource Include="Resources\Transformers\TrueCDAToCDALike.xsl" />
+    <EmbeddedResource Include="Resources\TransformFiles.xml" />
+    <EmbeddedResource Include="Resources\Schematrons\Iso\iso_abstract_expand.xsl" />
+    <EmbeddedResource Include="Resources\Schematrons\Iso\iso_dsdl_include.xsl" />
+    <EmbeddedResource Include="Resources\Schematrons\Iso\iso_schematron_skeleton_for_xslt1.xsl" />
+    <EmbeddedResource Include="Resources\Schematrons\Iso\iso_schematron_text.xsl" />
+    <EmbeddedResource Include="Resources\Schematrons\Iso\iso_svrl_for_xslt1.xsl" />
+    <EmbeddedResource Include="Resources\Schematrons\PSIS_Query_Schematron.xml" />
+    <EmbeddedResource Include="Resources\Transformers\CDA_NPfIT_Document_Renderer.xsl" />
+    <EmbeddedResource Include="Resources\Transformers\IntegratedUrgentCare_CDA_Renderer_PrimaryRecipients.xslt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Vsxmd" Version="1.4.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

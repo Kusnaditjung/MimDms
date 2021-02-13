@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Messaging.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Messaging.Extensions">
+            <summary>
+            Extension methods to support usage of validator and transformer
+            </summary>
+        </member>
+        <member name="M:Messaging.Extensions.GetText(System.IO.Stream)">
+            <summary>
+            Used to convert a stream to text representation
+            </summary>
+            <param name="stream">Stream input</param>
+            <returns>Return the equivalent text</returns>
+        </member>
+        <member name="M:Messaging.Extensions.GetStream(System.String)">
+            <summary>
+            Used to convert from string to stream representation
+            </summary>
+            <param name="content">input in text representation</param>
+            <returns>Return the equivalent stream</returns>
+        </member>
+        <member name="M:Messaging.Extensions.GetStreamFromAssembly(System.String)">
+            <summary>
+            Get stream from embedded resource in the current code assembly
+            </summary>
+            <param name="resourceName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Messaging.Extensions.MakeSureHasSchemaExtension(System.String)">
+            <summary>
+            Check filename, if it does not have extension append with xsd extension
+            </summary>
+            <param name="filename">Filename</param>
+            <returns>Return filename with xsd extension</returns>
+        </member>
+        <member name="M:Messaging.Extensions.IsValidXml(System.String)">
+            <summary>
+            Check if xml is a valid XML content
+            </summary>
+            <param name="xml">input XML</param>
+            <returns>Return true or false</returns>
+        </member>
+        <member name="T:Messaging.Core.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Messaging.Core.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Messaging.Core.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Messaging.Resolvers.DirectoryResourceResolver">
+            <summary>
+            DirectoryResourceResolver is resource resolver which use a directory in the disk as a source
+            </summary>
+        </member>
+        <member name="M:Messaging.Resolvers.DirectoryResourceResolver.#ctor(System.String)">
+            <summary>
+            <see cref="T:Messaging.Resolvers.DirectoryResourceResolver"/> instance constructor
+            </summary>
+            <param name="path">directory on disk/volume to be used as source</param>
+        </member>
+        <member name="P:Messaging.Resolvers.DirectoryResourceResolver.ResourceSourceName">
+            <summary>
+            Resource Source name
+            </summary>
+        </member>
+        <member name="P:Messaging.Resolvers.DirectoryResourceResolver.ResourceList">
+            <summary>
+            List of resources in that directory, including all subdirectories's files
+            </summary>
+        </member>
+        <member name="M:Messaging.Resolvers.DirectoryResourceResolver.GetResourceContent(System.String)">
+            <summary>
+            Get resource content based on the resource name
+            </summary>
+            <param name="resourceName">Resource name</param>
+            <returns>Return a stream for the resource</returns>
+        </member>
+        <member name="T:Messaging.Resolvers.EmbeddedResourceResolver">
+            <summary>
+            This class resolves resource by matching filename and extension of the embedded resources in an assembly
+            </summary>
+        </member>
+        <member name="M:Messaging.Resolvers.EmbeddedResourceResolver.#ctor(System.Reflection.Assembly)">
+            <summary>
+            <see cref="T:Messaging.Resolvers.EmbeddedResourceResolver"/> instance constructor
+            </summary>
+            <param name="resourceAssembly">Resource assembly</param>
+        </member>
+        <member name="P:Messaging.Resolvers.EmbeddedResourceResolver.ResourceSourceName">
+            <summary>
+            Resource source name
+            </summary>
+        </member>
+        <member name="P:Messaging.Resolvers.EmbeddedResourceResolver.ResourceList">
+            <summary>
+            List of embedded resources in the assembly
+            </summary>
+        </member>
+        <member name="M:Messaging.Resolvers.EmbeddedResourceResolver.GetResourceContent(System.String)">
+            <summary>
+            Get resource content stream based on the resource name
+            </summary>
+            <param name="resourceName">Resourc name</param>
+            <returns>Return a stream of the resource</returns>
+        </member>
+        <member name="M:Messaging.Resolvers.EmbeddedResourceResolver.Create(Messaging.Resolvers.AssemblyType)">
+            <summary>
+            <see cref="T:Messaging.Resolvers.EmbeddedResourceResolver"/> static constructor
+            </summary>
+            <param name="assemblyType">Assembly containing the embedded resources</param>
+            <returns>Return <see cref="T:Messaging.Resolvers.EmbeddedResourceResolver"/></returns>
+        </member>
+        <member name="T:Messaging.Resolvers.AssemblyType">
+            <summary>
+            Enumeration of Assembly type
+            </summary>
+        </member>
+        <member name="F:Messaging.Resolvers.AssemblyType.Library">
+            <summary>Library assembly, equivalent to Mim.Core assembly</summary>
+        </member>
+        <member name="F:Messaging.Resolvers.AssemblyType.Caller">
+            <summary>Assembly that making the call, eg. for unit tests project </summary>
+        </member>
+        <member name="F:Messaging.Resolvers.AssemblyType.EntryHost">
+            <summary>Assembly that host the application e.g web project, desktop app, etc</summary>
+        </member>
+        <member name="T:Messaging.Resolvers.IResourceResolver">
+            <summary>
+            Interface for resource resolver
+            </summary>
+        </member>
+        <member name="M:Messaging.Resolvers.IResourceResolver.GetResourceStream(System.String)">
+            <summary>
+            Signature to retrieve a stream from a resource name
+            </summary>
+            <param name="resourceName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Messaging.Resolvers.ResourceResolver">
+            <summary>
+            Resource resolver is abstract class contain both XMLUrlResolver and IResourceResolver implementation
+            </summary>
+        </member>
+        <member name="P:Messaging.Resolvers.ResourceResolver.ResourceSourceName">
+            <summary>
+            Resource Source name
+            </summary>
+        </member>
+        <member name="M:Messaging.Resolvers.ResourceResolver.GetResourceContent(System.String)">
+            <summary>
+            Get resource stream based on the resource name
+            </summary>
+            <param name="resourceName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Messaging.Resolvers.ResourceResolver.ResourceList">
+            <summary>
+            Get the resource list from this source
+            </summary>
+        </member>
+        <member name="M:Messaging.Resolvers.ResourceResolver.FillMap">
+            <summary>
+            Create a map with key resourceName, and the actual resource path in the source
+            </summary>
+        </member>
+        <member name="M:Messaging.Resolvers.ResourceResolver.GetEntity(System.Uri,System.String,System.Type)">
+            <summary>
+             Method from XMLUrlResolver to resolve an entity
+            </summary>
+            <param name="absoluteUri">Absolute Uri for the resource</param>
+            <param name="role">Role</param>
+            <param name="ofObjectToReturn">Object to return, by default this should be a stream</param>
+            <returns></returns>
+        </member>
+        <member name="M:Messaging.Resolvers.ResourceResolver.GetResourceStream(System.String)">
+            <summary>
+            This is method for IResourceResolver which resolve a resourceName to a stream
+            </summary>
+            <param name="resourceName">Resource name</param>
+            <returns>Return a stream of the resource</returns>
+        </member>
+        <member name="T:Messaging.Result">
+            <summary>
+            Result is return type for validator and stylesheet transformer in this assembly
+            </summary>
+        </member>
+        <member name="F:Messaging.Result.Status">
+            <summary>
+            Status, can be true of false
+            </summary>
+        </member>
+        <member name="F:Messaging.Result.Description">
+            <summary>
+            Description text
+            </summary>
+        </member>
+        <member name="F:Messaging.Result.ErrorException">
+            <summary>
+            Exception
+            </summary>
+        </member>
+        <member name="M:Messaging.Result.#ctor(System.Boolean,System.String,System.Exception)">
+            <summary>
+            <see cref="T:Messaging.Result"/> instance constructor
+            </summary>
+            <param name="status">Status of the result: true or false</param>
+            <param name="description">Description of the result</param>
+            <param name="exception">Exception, by default the value is null</param>
+        </member>
+        <member name="M:Messaging.Result.Success">
+            <summary>
+            Success result
+            </summary>
+            <returns>Return a success result</returns>
+        </member>
+        <member name="M:Messaging.Result.Error(System.String)">
+            <summary>
+            Error result
+            </summary>
+            <param name="error">Error description</param>
+            <returns>Return an error result</returns>
+        </member>
+        <member name="M:Messaging.Result.Exception(System.Exception)">
+            <summary>
+            Error result with an exception
+            </summary>
+            <param name="ex">Exception</param>
+            <returns>Return an error result with an exception</returns>
+        </member>
+        <member name="M:Messaging.Result.ErrorAndException(System.String,System.Exception)">
+            <summary>
+            Error result with exception and error description
+            </summary>
+            <param name="errorMessage">Error description</param>
+            <param name="ex">Exception</param>
+            <returns>Return an error with exception and error description</returns>
+        </member>
+        <member name="T:Messaging.Transformers.StylesheetTransformer">
+            <summary>
+            StylesheetTransformer is the stylesheet transformer
+            </summary>
+        </member>
+        <member name="M:Messaging.Transformers.StylesheetTransformer.#ctor(Messaging.Resolvers.ResourceResolver)">
+            <summary>
+            <see cref="T:Messaging.Transformers.StylesheetTransformer"/> instance constructor
+            </summary>
+            <param name="resolver">Resource resolver, used to resolve any reference in the stylesheet content</param>
+        </member>
+        <member name="M:Messaging.Transformers.StylesheetTransformer.Transform(Messaging.Transformers.StylesheetDocument,System.String)">
+            <summary>
+            Transform input XML using an enumerated stylessheet document contained in the Messaging.Core
+            </summary>
+            <param name="stylesheetDocument">Enumerated stylesheet content</param>
+            <param name="inputXml">input XML</param>
+            <returns>Return a transformed XML</returns>
+        </member>
+        <member name="M:Messaging.Transformers.StylesheetTransformer.Transform(System.String,System.String)">
+            <summary>
+            Transform inputXML based on an stylesheet XML
+            </summary>
+            <param name="stylesheetXml">Stylesheet XML</param>
+            <param name="inputXml">input XML</param>
+            <returns></returns>
+        </member>
+        <member name="M:Messaging.Transformers.StylesheetTransformer.TransformStream(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            Transform input stream using a stylesheet stream
+            </summary>
+            <param name="stylesheetStream">stylesheet stream</param>
+            <param name="inputXmlStream">input XML stream</param>
+            <returns>Return a transformed stream</returns>
+        </member>
+        <member name="T:Messaging.Transformers.StylesheetDocument">
+            <summary>
+            Enumerated stylesheet content
+            </summary>
+        </member>
+        <member name="F:Messaging.Transformers.StylesheetDocument.CdaToTemplated">
+            <summary>
+            Transform a generic CDA to templated CDA message
+            </summary>
+        </member>
+        <member name="F:Messaging.Transformers.StylesheetDocument.TemplatedToCda">
+            <summary>
+            Transform a templated CDA to a generic CDA message
+            </summary>
+        </member>
+        <member name="F:Messaging.Transformers.StylesheetDocument.CdaRenderer">
+            <summary>
+            Transform a generic CDA to viewable HTML
+            </summary>
+        </member>
+        <member name="F:Messaging.Transformers.StylesheetDocument.Nhs111PrimaryCdaRenderer">
+            <summary>
+            Transform a generic CDA to viewable HTML for NHS 111 primary recipient
+            </summary>
+        </member>
+        <member name="F:Messaging.Transformers.StylesheetDocument.PostConversion">
+            <summary>
+            Transform a generic CDA or templated CDA after the conversion
+            </summary>
+        </member>
+        <member name="T:Messaging.Validators.CdaValidator">
+            <summary>
+            CdaValidator is used to validate against CDA generic format messages
+            It contains a series of validation and transformation:
+            - Schema validation against CDA generic message
+            - Schematron validation against CDA generic message
+            - Transformation to templated CDA message
+            - Schema validation against templated CDA message
+            - Schematron validation against templated CDA message
+            </summary>
+        </member>
+        <member name="M:Messaging.Validators.CdaValidator.#ctor(Messaging.Resolvers.ResourceResolver)">
+            <summary>
+            <see cref="T:Messaging.Validators.CdaValidator"/> instance constructor 
+            </summary>
+            <param name="externalResolver">Resource resolver particularly for schema</param>
+        </member>
+        <member name="M:Messaging.Validators.CdaValidator.Create(System.Reflection.Assembly)">
+            <summary>
+            Create is a <see cref="T:Messaging.Validators.CdaValidator"/> static constructor
+            </summary>
+            <param name="externalAssembly">Assembly containing the schema as embedded resources</param>
+            <returns></returns>
+        </member>
+        <member name="M:Messaging.Validators.CdaValidator.Create(System.String)">
+            <summary>
+            Create is a <see cref="T:Messaging.Validators.CdaValidator"/> static constructor
+            </summary>
+            <param name="folder">folder containing the schema</param>
+            <returns></returns>
+        </member>
+        <member name="M:Messaging.Validators.CdaValidator.Validate(System.String,System.String,System.String)">
+            <summary>
+            Validate the generic CDA message
+            </summary>
+            <param name="inputXml">generic CDA message in XML</param>
+            <param name="templateSchemaName">optional template schema name, if not present it will use whatever template schema name present in the input XML</param>
+            <param name="genericCdaSchemaName">optional CDA schema name, if not present if twill use whatever CDA schem name present in the input XML</param>
+            <returns></returns>
+        </member>
+        <member name="T:Messaging.Validators.SchematronValidator">
+            <summary>
+            SchematronValidator is an ISO compliant schematron validator
+            </summary>
+        </member>
+        <member name="M:Messaging.Validators.SchematronValidator.#ctor(System.String,System.Boolean)">
+            <summary>
+            <see cref="T:Messaging.Validators.SchematronValidator"/> instance constructor
+            </summary>
+            <param name="schematronContent">Schematron content message in XML format</param>
+            <param name="convertToIsoNamespace">
+            Flag to indicate whether or not to conver the old XML namespace to new ISO namespace
+            The old namespace: http://www.ascc.net/xml/schematron
+            The Iso namespace: http://purl.oclc.org/dsdl/schematron
+            The validation will fail on old namespace
+            </param>
+        </member>
+        <member name="M:Messaging.Validators.SchematronValidator.#ctor(System.IO.Stream)">
+            <summary>
+            <see cref="T:Messaging.Validators.SchematronValidator"/> instance constructor
+            </summary>
+            <param name="schematronStream">Schematron content stream</param>
+        </member>
+        <member name="M:Messaging.Validators.SchematronValidator.Validate(System.String)">
+            <summary>
+            Used to validate a message against the schematron content specified in the constructor
+            </summary>
+            <param name="inputXml">input message XML</param>
+            <returns></returns>
+        </member>
+        <member name="M:Messaging.Validators.SchematronValidator.Validate(System.IO.Stream)">
+            <summary>
+            Used to validate a message against the schematron content specified in the constructor
+            </summary>
+            <param name="inputStream">input message stream</param>
+            <returns></returns>
+        </member>
+        <member name="M:Messaging.Validators.SchematronValidator.Create(Messaging.Validators.SchematronDocument)">
+            <summary>
+            <see cref="T:Messaging.Validators.SchemaValidator"/> static constructor with an enumerated schematron content for NHS messages)
+            </summary>
+            <param name="schematronDocument">Enumerated schematron content, the resources is contained wihtin Messaging.Core assembly</param>
+            <returns></returns>
+        </member>
+        <member name="T:Messaging.Validators.SchematronDocument">
+            <summary>
+            Schematron content enumeration for NHS messages
+            </summary>
+        </member>
+        <member name="F:Messaging.Validators.SchematronDocument.GenericCda">
+            <summary>
+            Schematron content for generic CDA message
+            </summary>
+        </member>
+        <member name="F:Messaging.Validators.SchematronDocument.TemplatedCda">
+            <summary>
+            Schematron content for templated CDA message
+            </summary>
+        </member>
+        <member name="F:Messaging.Validators.SchematronDocument.GenericCdaInteraction">
+            <summary>
+            Schematron content for HL7 V3 interaction
+            </summary>
+        </member>
+        <member name="F:Messaging.Validators.SchematronDocument.PsisQuery">
+            <summary>
+            Schematron content for PSIS Query message
+            </summary>
+        </member>
+        <member name="T:Messaging.Validators.SchemaValidator">
+            <summary>
+            SchemaValidator is a schema validator
+            </summary>
+        </member>
+        <member name="M:Messaging.Validators.SchemaValidator.#ctor(Messaging.Resolvers.ResourceResolver)">
+            <summary>
+            <see cref="T:Messaging.Validators.SchemaValidator"/> instance constructor
+            </summary>
+            <param name="externalResolver">Resource resolver for the </param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>kusnaditjung@yahoo.com</Authors>
+    <Company>FreeCode</Company>
+    <Copyright>2020</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+	<Description>The package contains c# generated classes for MIM version 4.2.00, and also its associated schemas that can be used for schema validation.</Description>    <RepositoryUrl>https://github.com/Kusnaditjung/MimDms</RepositoryUrl>
+	<PackageReleaseNotes>MIM 4.2.00</PackageReleaseNotes>
+	<PackageProjectUrl>https://github.com/Kusnaditjung/MimDms</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.2.0</Version>
+    <PackageOutputPath>../../dist/ </PackageOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Generated\" />
+    <Folder Include="Schema\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="SchemaNames.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SchemaNames.tt</DependentUpon>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SchemaNames.tt">
+      <LastGenOutput>SchemaNames.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="SchemaNames.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SchemaNames.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
